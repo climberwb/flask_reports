@@ -29,7 +29,7 @@ app.config['MONGO_URI'] = 'mongodb://ImASmarty:12345@dbh44.mlab.com:27447/attemp
 
 
 @app.route('/games', methods=['GET'])
-@cross_origin()
+# @cross_origin()
 def get_all_games():
     print'dfdf'
     # games = mongo.db.games

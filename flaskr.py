@@ -5,6 +5,7 @@ from flask import Flask
 from flask import jsonify
 from flask import request
 from flask_cors import CORS, cross_origin
+from flask import render_template
 
 # from flask_pymongo import PyMongo
 import pymongo
@@ -131,7 +132,7 @@ def statistics_for_all_games_per_level():
                     }
     
     aggregate_by_level =   { "$group": { 
-                                  "_id" :  "$_id.gameId",
+                                "_id" :  "$_id.gameId",
                                   "levels": { 
                                       "$push": { 
                                          "level":"$_id.level"
@@ -159,6 +160,12 @@ def statistics_for_all_games_per_level():
 
     output = list(game_instance_stats)
     return jsonify({'result' : output})
+
+###### TEMPLATES ####################
+@app.route('/games/form/')
+def hello():
+    return render_template('hello.html')
+
 
 if __name__ == '__main__':
     app.debug = True
