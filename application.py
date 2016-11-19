@@ -32,3 +32,31 @@ if __name__ == "__main__":
     # removed before deploying a production app.
     application.debug = True
     application.run(host=os.getenv('IP', '0.0.0.0'),port=int(os.getenv('PORT', 8080)))
+    
+'''
+    {
+        attempts:
+            {
+                        #maybe total levels in game,
+                        attempts:{
+                            [
+                                {   ###gameId,
+                                    userId, 
+                                    Level,
+                                    time, 
+                                    timestamp, 
+                                    incorrect,# #of explosions 
+                                    correct,  # number of correct pairs in this case max is one,
+                                    totalPossibleCorrect, # in this case one
+                                    completedAttempt,
+                                    gameInLevel: #this is for keeping track if there are multiple game attempts in a level. 
+                                },
+                                
+                            ]
+                        }
+                    }
+
+    }
+    
+    query to mlabs https://api.mlab.com/api/1/databases/attempts/collections/attempts/?q={%22level%22:1}&apiKey=u8YtBzwVyloYLy6hBUdgeLjOz1tygzUx
+'''
