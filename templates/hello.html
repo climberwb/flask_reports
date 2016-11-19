@@ -34,6 +34,7 @@
                 
                 let attribute_section = $(this).parent().parent().clone(true)
                 $(this).parent().parent().parent().append(attribute_section);
+                $(attribute_section).find(".form-control").val("");
                 return attribute_section
         }
         $( document ).ready(function() {
