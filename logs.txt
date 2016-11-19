@@ -1,0 +1,459 @@
+Retrieving logs...
+============= i-f81063f6 ==============
+-------------------------------------
+/var/log/httpd/error_log
+-------------------------------------
+[Sat Nov 19 16:30:31.367691 2016] [auth_digest:notice] [pid 15314] AH01757: generating secret for digest authentication ...
+[Sat Nov 19 16:30:31.368406 2016] [lbmethod_heartbeat:notice] [pid 15314] AH02282: No slotmem from mod_heartmonitor
+[Sat Nov 19 16:30:31.368462 2016] [:warn] [pid 15314] mod_wsgi: Compiled for Python/2.7.10.
+[Sat Nov 19 16:30:31.368469 2016] [:warn] [pid 15314] mod_wsgi: Runtime using Python/2.7.12.
+[Sat Nov 19 16:30:31.370738 2016] [mpm_prefork:notice] [pid 15314] AH00163: Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Sat Nov 19 16:30:31.370754 2016] [core:notice] [pid 15314] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Nov 19 16:30:34.056158 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:34.056198 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:34.056222 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:34.056245 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:34.056330 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:34.056347 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:35.059751 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:35.059788 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:35.059809 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:35.059832 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:35.059864 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:35.059883 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:36.063219 2016] [:error] [pid 15319] [remote 127.0.0.1:17390] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:36.063251 2016] [:error] [pid 15319] [remote 127.0.0.1:17390] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:36.063280 2016] [:error] [pid 15319] [remote 127.0.0.1:17390] Traceback (most recent call last):
+[Sat Nov 19 16:30:36.063299 2016] [:error] [pid 15319] [remote 127.0.0.1:17390]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:36.063328 2016] [:error] [pid 15319] [remote 127.0.0.1:17390]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:36.063346 2016] [:error] [pid 15319] [remote 127.0.0.1:17390] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:37.066612 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:37.066642 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:37.066662 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:37.066682 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:37.066711 2016] [:error] [pid 15319] [remote 127.0.0.1:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:37.066742 2016] [:error] [pid 15319] [remote 127.0.0.1:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:52.808705 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:52.808739 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:52.808761 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:52.808784 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:52.808816 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:52.808836 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:57.565150 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:57.565180 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:57.565203 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:57.565226 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:57.565257 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:57.565277 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:30:57.688284 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:30:57.688309 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:30:57.688331 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] Traceback (most recent call last):
+[Sat Nov 19 16:30:57.688353 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:30:57.688383 2016] [:error] [pid 15319] [remote 172.31.6.164:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:30:57.688402 2016] [:error] [pid 15319] [remote 172.31.6.164:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:33:15.288004 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:33:15.288036 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:33:15.288073 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] Traceback (most recent call last):
+[Sat Nov 19 16:33:15.288095 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:33:15.288123 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:33:15.288141 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:33:15.375647 2016] [:error] [pid 15319] [remote 172.31.60.58:17390] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:33:15.375664 2016] [:error] [pid 15319] [remote 172.31.60.58:17390] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:33:15.375683 2016] [:error] [pid 15319] [remote 172.31.60.58:17390] Traceback (most recent call last):
+[Sat Nov 19 16:33:15.375702 2016] [:error] [pid 15319] [remote 172.31.60.58:17390]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:33:15.375729 2016] [:error] [pid 15319] [remote 172.31.60.58:17390]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:33:15.375748 2016] [:error] [pid 15319] [remote 172.31.60.58:17390] ImportError: No module named flask_cors
+[Sat Nov 19 16:33:17.969660 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:33:17.969690 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:33:17.969709 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] Traceback (most recent call last):
+[Sat Nov 19 16:33:17.969732 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:33:17.969776 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:33:17.969796 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:33:18.072896 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Target WSGI script '/opt/python/current/app/application.py' cannot be loaded as Python module.
+[Sat Nov 19 16:33:18.072924 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] mod_wsgi (pid=15319): Exception occurred processing WSGI script '/opt/python/current/app/application.py'.
+[Sat Nov 19 16:33:18.072944 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] Traceback (most recent call last):
+[Sat Nov 19 16:33:18.072967 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]   File "/opt/python/current/app/application.py", line 7, in <module>
+[Sat Nov 19 16:33:18.072995 2016] [:error] [pid 15319] [remote 172.31.60.58:21742]     from flask_cors import CORS, cross_origin
+[Sat Nov 19 16:33:18.073014 2016] [:error] [pid 15319] [remote 172.31.60.58:21742] ImportError: No module named flask_cors
+[Sat Nov 19 16:33:23.304388 2016] [mpm_prefork:notice] [pid 15314] AH00169: caught SIGTERM, shutting down
+[Sat Nov 19 16:33:24.409237 2016] [suexec:notice] [pid 15622] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Nov 19 16:33:24.421814 2016] [so:warn] [pid 15622] AH01574: module wsgi_module is already loaded, skipping
+[Sat Nov 19 16:33:24.424356 2016] [auth_digest:notice] [pid 15622] AH01757: generating secret for digest authentication ...
+[Sat Nov 19 16:33:24.425008 2016] [lbmethod_heartbeat:notice] [pid 15622] AH02282: No slotmem from mod_heartmonitor
+[Sat Nov 19 16:33:24.425058 2016] [:warn] [pid 15622] mod_wsgi: Compiled for Python/2.7.10.
+[Sat Nov 19 16:33:24.425066 2016] [:warn] [pid 15622] mod_wsgi: Runtime using Python/2.7.12.
+[Sat Nov 19 16:33:24.427228 2016] [mpm_prefork:notice] [pid 15622] AH00163: Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Sat Nov 19 16:33:24.427248 2016] [core:notice] [pid 15622] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Nov 19 16:34:30.695402 2016] [mpm_prefork:notice] [pid 15622] AH00169: caught SIGTERM, shutting down
+[Sat Nov 19 16:34:31.754667 2016] [suexec:notice] [pid 15854] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+[Sat Nov 19 16:34:31.766784 2016] [so:warn] [pid 15854] AH01574: module wsgi_module is already loaded, skipping
+[Sat Nov 19 16:34:31.769376 2016] [auth_digest:notice] [pid 15854] AH01757: generating secret for digest authentication ...
+[Sat Nov 19 16:34:31.769991 2016] [lbmethod_heartbeat:notice] [pid 15854] AH02282: No slotmem from mod_heartmonitor
+[Sat Nov 19 16:34:31.770033 2016] [:warn] [pid 15854] mod_wsgi: Compiled for Python/2.7.10.
+[Sat Nov 19 16:34:31.770041 2016] [:warn] [pid 15854] mod_wsgi: Runtime using Python/2.7.12.
+[Sat Nov 19 16:34:31.773726 2016] [mpm_prefork:notice] [pid 15854] AH00163: Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 configured -- resuming normal operations
+[Sat Nov 19 16:34:31.773747 2016] [core:notice] [pid 15854] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Sat Nov 19 16:34:34.517423 2016] [:error] [pid 15859] [remote 127.0.0.1:9388] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:34.518083 2016] [:error] [pid 15859] [remote 172.31.60.58:9132] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:34.629104 2016] [:error] [pid 15859] [remote 172.31.60.58:136] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:35.520034 2016] [:error] [pid 15859] [remote 127.0.0.1:136] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:36.522560 2016] [:error] [pid 15859] [remote 127.0.0.1:7340] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:37.524903 2016] [:error] [pid 15859] [remote 127.0.0.1:9388] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:43.455400 2016] [:error] [pid 15859] [remote 172.31.60.58:9132] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:43.539122 2016] [:error] [pid 15859] [remote 172.31.60.58:9132] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:46.580356 2016] [:error] [pid 15859] [remote 172.31.60.58:9132] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+[Sat Nov 19 16:34:46.685600 2016] [:error] [pid 15859] [remote 172.31.60.58:136] mod_wsgi (pid=15859): Target WSGI script '/opt/python/current/app/application.py' does not contain WSGI application 'application'.
+
+
+
+-------------------------------------
+/opt/python/log/supervisord.log
+-------------------------------------
+2016-11-14 21:54:02,242 CRIT Supervisor running as root (no user in config file)
+2016-11-14 21:54:02,266 INFO RPC interface 'supervisor' initialized
+2016-11-14 21:54:02,266 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2016-11-14 21:54:02,266 INFO supervisord started with pid 2815
+2016-11-14 21:54:03,268 INFO spawned: 'httpd' with pid 2899
+2016-11-14 21:54:04,270 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-14 21:54:30,653 INFO stopped: httpd (exit status 0)
+2016-11-14 21:54:31,658 INFO spawned: 'httpd' with pid 3088
+2016-11-14 21:54:32,660 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-14 21:59:09,256 INFO stopped: httpd (exit status 0)
+2016-11-14 21:59:10,261 INFO spawned: 'httpd' with pid 3372
+2016-11-14 21:59:11,304 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-14 22:00:20,673 INFO stopped: httpd (exit status 0)
+2016-11-14 22:00:21,678 INFO spawned: 'httpd' with pid 3614
+2016-11-14 22:00:22,714 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-14 22:01:53,289 INFO stopped: httpd (exit status 0)
+2016-11-14 22:01:54,294 INFO spawned: 'httpd' with pid 3896
+2016-11-14 22:01:55,335 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-19 16:30:30,306 INFO stopped: httpd (exit status 0)
+2016-11-19 16:30:31,310 INFO spawned: 'httpd' with pid 15314
+2016-11-19 16:30:32,352 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-19 16:33:23,363 INFO stopped: httpd (exit status 0)
+2016-11-19 16:33:24,368 INFO spawned: 'httpd' with pid 15622
+2016-11-19 16:33:25,409 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+2016-11-19 16:34:30,707 INFO stopped: httpd (exit status 0)
+2016-11-19 16:34:31,712 INFO spawned: 'httpd' with pid 15854
+2016-11-19 16:34:32,754 INFO success: httpd entered RUNNING state, process has stayed up for > than 1 seconds (startsecs)
+
+
+
+-------------------------------------
+/var/log/httpd/access_log
+-------------------------------------
+172.31.6.164 (198.20.69.74) - - [18/Nov/2016:14:58:05 +0000] "GET /sitemap.xml HTTP/1.1" 200 132 "-" "-"
+::1 (-) - - [18/Nov/2016:14:59:06 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:14:59:11 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:14:59:12 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:14:59:18 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.6.164 (47.151.21.138) - - [18/Nov/2016:15:16:13 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:16:11:32 +0000] "GET /player/container?jsonp=callbackmixpoPID70102&log=true&guid=6fb76e88-b310-417b-83f7-53bd084ffd40&fpversion=23.0.0&player=html5&requestnumber=0&viewid=571D8D32-D590-6A16-74F6-78350B71972B&dl=http%3A//my.xfinity.com/%3Fcid%3Dcust&ua=impression&iframe=friendly&meta2=1744%3A264%3A2560%3A1379%26master%3Aaa45f90-v.0-coajs&custom_target=%3Bzip%3DUS%3A60012 HTTP/1.1" 404 233 "http://my.xfinity.com/adframe/home/x32" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (61.186.245.211) - - [18/Nov/2016:17:12:39 +0000] "POST /register.do HTTP/1.1" 405 178 "-" "Mozilla/5.0"
+172.31.6.164 (87.228.242.225) - - [18/Nov/2016:17:36:14 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.6.164 (192.99.56.74) - - [18/Nov/2016:19:49:46 +0000] "GET / HTTP/1.1" 200 267 "-" "python-requests/2.10.0"
+172.31.6.164 (201.229.150.66) - - [18/Nov/2016:20:38:32 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.6.164 (51.15.43.87) - - [18/Nov/2016:21:27:23 +0000] "GET /xmlrpc.php HTTP/1.1" 200 131 "-" "PycURL/7.19.5 libcurl/7.38.0 GnuTLS/3.3.8 zlib/1.2.8 libidn/1.29 libssh2/1.4.3 librtmp/2.3"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:22:48:51 +0000] "GET /player/container?jsonp=callbackmixpoPID1101&log=true&guid=6fb76e88-b310-417b-83f7-53bd084ffd40&fpversion=23.0.0&player=html5&requestnumber=0&viewid=E03160C6-9AC6-92E7-6788-79A0CF33D18A&dl=http%3A//my.xfinity.com/%3Fcid%3Dcust&ua=impression&iframe=friendly&meta2=1744%3A264%3A2560%3A1379%26master%3Aaa45f90-v.0-coajs&custom_target=%3Bzip%3DUS%3A60012 HTTP/1.1" 404 233 "http://my.xfinity.com/adframe/home/x32" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:22:48:56 +0000] "GET /player/analytics/log?guid=6fb76e88-b310-417b-83f7-53bd084ffd40&viewid=E03160C6-9AC6-92E7-6788-79A0CF33D18A&requestnumber=1&dl=http%3A//my.xfinity.com/%3Fcid%3Dcust&player=unknown&fpversion=23.0.0&ua=s3&meta1=0 HTTP/1.1" 404 233 "http://my.xfinity.com/adframe/home/x32" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+::1 (-) - - [18/Nov/2016:22:50:27 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:02:04 +0000] "GET /player/container?jsonp=callbackmixpoPID12973&log=true&guid=4bb9a32f-a75e-432a-9081-42048ba925f7&fpversion=23.0.0&player=html5&requestnumber=0&viewid=2E72767C-4558-C3C7-D9C1-79ACE66DBC6E&dl=http%3A//my.xfinity.com/%3Fcid%3Dxfinityconnecttocomcastnet&ua=impression&iframe=friendly&meta2=1301%3A264%3A1674%3A1038%26release/16.1.24.0&custom_target=%3Bzip%3DUS%3A60012 HTTP/1.1" 404 233 "http://my.xfinity.com/adframe/home/x32" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:02:09 +0000] "GET /player/analytics/log?guid=4bb9a32f-a75e-432a-9081-42048ba925f7&viewid=2E72767C-4558-C3C7-D9C1-79ACE66DBC6E&requestnumber=1&dl=http%3A//my.xfinity.com/%3Fcid%3Dxfinityconnecttocomcastnet&player=unknown&fpversion=23.0.0&ua=s3&meta1=0 HTTP/1.1" 404 233 "http://my.xfinity.com/adframe/home/x32" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:02:15 +0000] "POST /player/analytics/log HTTP/1.1" 404 233 "http://my.xfinity.com/?cid=xfinityconnecttocomcastnet" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+::1 (-) - - [18/Nov/2016:23:03:15 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:03:16 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:03:20 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:03:21 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:03:28 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:24:20 +0000] "POST /player/analytics/log HTTP/1.1" 404 233 "http://my.xfinity.com/?cid=xfinityconnecttocomcastnet" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:24:23 +0000] "POST /player/analytics/log HTTP/1.1" 404 233 "http://my.xfinity.com/?cid=xfinityconnecttocomcastnet" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+172.31.60.58 (67.184.110.5) - - [18/Nov/2016:23:24:25 +0000] "POST /player/analytics/log HTTP/1.1" 404 233 "http://my.xfinity.com/?cid=xfinityconnecttocomcastnet" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/601.7.7 (KHTML, like Gecko) Version/9.1.2 Safari/601.7.7"
+::1 (-) - - [18/Nov/2016:23:25:25 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:25:26 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:25:28 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:25:30 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [18/Nov/2016:23:25:31 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.6.164 (1.34.21.243) - - [19/Nov/2016:00:47:30 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (66.240.192.138) - - [19/Nov/2016:02:12:51 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36"
+172.31.60.58 (66.240.192.138) - - [19/Nov/2016:02:13:21 +0000] "GET /sitemap.xml HTTP/1.1" 200 132 "-" "-"
+172.31.6.164 (62.210.181.161) - - [19/Nov/2016:03:51:41 +0000] "HEAD /robots.txt HTTP/1.1" 200 - "-" "-"
+172.31.6.164 (175.138.212.117) - - [19/Nov/2016:05:23:44 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (184.21.11.28) - - [19/Nov/2016:06:32:10 +0000] "GET /crossdomain.xml HTTP/1.1" 200 136 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
+172.31.6.164 (52.197.117.189) - - [19/Nov/2016:07:30:37 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 zgrab/0.x"
+172.31.6.164 (141.105.65.71) - - [19/Nov/2016:08:52:56 +0000] "GET / HTTP/1.1" 200 267 "-" "libwww-perl/6.15"
+172.31.6.164 (73.0.60.183) - - [19/Nov/2016:09:29:47 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.6.164 (95.68.184.108) - - [19/Nov/2016:11:31:13 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (52.197.117.189) - - [19/Nov/2016:12:08:44 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 zgrab/0.x"
+172.31.6.164 (220.135.169.228) - - [19/Nov/2016:12:12:28 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (184.20.161.228) - - [19/Nov/2016:13:46:56 +0000] "GET /player/container?jsonp=callbackmixpoPID68072&log=true&guid=d9bb753a-9ac9-4b1d-8b91-77921663fcd9&player=html5&requestnumber=0&viewid=7102B172-6BEF-CF24-878A-7CD705AB8CA5&dl=http%3A//kfor.com/category/news/&ua=impression&iframe=friendly&meta2=117%3A829.921875%3A534%3A782%26master%3A724bcda-v15.4.7.0.0-trib HTTP/1.1" 404 233 "http://kfor.com/category/news/" "Mozilla/5.0 (Linux; Android 5.1.1; KFARWI Build/LVY48F) AppleWebKit/537.36 (KHTML, like Gecko) Silk/53.3.5 like Chrome/53.0.2785.134 Safari/537.36"
+172.31.60.58 (184.20.161.228) - - [19/Nov/2016:13:46:59 +0000] "GET /player/analytics/log?guid=d9bb753a-9ac9-4b1d-8b91-77921663fcd9&viewid=7102B172-6BEF-CF24-878A-7CD705AB8CA5&requestnumber=1&dl=http%3A//kfor.com/category/news/&player=unknown&ua=s3&meta1=2 HTTP/1.1" 404 233 "http://kfor.com/category/news/" "Mozilla/5.0 (Linux; Android 5.1.1; KFARWI Build/LVY48F) AppleWebKit/537.36 (KHTML, like Gecko) Silk/53.3.5 like Chrome/53.0.2785.134 Safari/537.36"
+172.31.60.58 (184.20.161.228) - - [19/Nov/2016:13:47:00 +0000] "GET /player/analytics/log?guid=d9bb753a-9ac9-4b1d-8b91-77921663fcd9&player=html5&requestnumber=0&viewid=7102B172-6BEF-CF24-878A-7CD705AB8CA5&dl=http%3A//kfor.com/category/news/&ua=impression&iframe=friendly&meta2=117%3A829.921875%3A534%3A782%26master%3A724bcda-v15.4.7.0.0-trib HTTP/1.1" 404 233 "http://kfor.com/category/news/" "Mozilla/5.0 (Linux; Android 5.1.1; KFARWI Build/LVY48F) AppleWebKit/537.36 (KHTML, like Gecko) Silk/53.3.5 like Chrome/53.0.2785.134 Safari/537.36"
+::1 (-) - - [19/Nov/2016:13:48:00 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:13:48:05 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:13:48:33 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.6.164 (85.247.150.194) - - [19/Nov/2016:13:50:17 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
+172.31.60.58 (195.154.185.244) - - [19/Nov/2016:14:14:37 +0000] "HEAD /robots.txt HTTP/1.1" 200 - "-" "-"
+172.31.60.58 (106.75.85.117) - - [19/Nov/2016:15:18:50 +0000] "GET / HTTP/1.1" 200 267 "-" "-"
+172.31.60.58 (23.247.88.123) - - [19/Nov/2016:15:32:18 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)"
+172.31.6.164 (23.247.27.26) - - [19/Nov/2016:15:46:10 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0)"
+172.31.6.164 (73.81.115.197) - - [19/Nov/2016:16:28:35 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.6.164 (73.81.115.197) - - [19/Nov/2016:16:28:35 +0000] "GET /favicon.ico HTTP/1.1" 200 132 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (75.107.131.150) - - [19/Nov/2016:16:29:27 +0000] "GET /player/vast2/3cd847c7-92d4-44ee-bdcb-b8461e689329?dynamic=true HTTP/1.1" 404 233 "http://player.hearst.io/?id=e70d533d-8e95-4d63-8df4-4816d07af935&icrossingId=10032&urlHash=27929cfe8b534ef4f0c7cb0c99c69384&fullUrl=http%3A%2F%2Fwww.mynbc5.com%2Farticle%2Fdraft-1%2F3614675&bu=HTV" "Mozilla/5.0 (iPad; CPU OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/FBIOS;FBAV/72.0.0.40.71;FBBV/43917395;FBRV/0;FBDV/iPad4,4;FBMD/iPad;FBSN/iOS;FBSV/10.1.1;FBSS/2;FBCR/;FBID/tablet;FBLC/en_US;FBOP/5]"
+172.31.60.58 (75.107.131.150) - - [19/Nov/2016:16:29:29 +0000] "GET /player/vast2/3cd847c7-92d4-44ee-bdcb-b8461e689329?dynamic=true HTTP/1.1" 404 233 "http://player.hearst.io/?id=e70d533d-8e95-4d63-8df4-4816d07af935&icrossingId=10032&urlHash=27929cfe8b534ef4f0c7cb0c99c69384&fullUrl=http%3A%2F%2Fwww.mynbc5.com%2Farticle%2Fdraft-1%2F3614675&bu=HTV" "Mozilla/5.0 (iPad; CPU OS 10_1_1 like Mac OS X) AppleWebKit/602.2.14 (KHTML, like Gecko) Mobile/14B100 [FBAN/FBIOS;FBAV/72.0.0.40.71;FBBV/43917395;FBRV/0;FBDV/iPad4,4;FBMD/iPad;FBSN/iOS;FBSV/10.1.1;FBSS/2;FBCR/;FBID/tablet;FBLC/en_US;FBOP/5]"
+::1 (-) - - [19/Nov/2016:16:29:36 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:29:41 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:29:42 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+127.0.0.1 (-) - - [19/Nov/2016:16:30:33 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [19/Nov/2016:16:30:35 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [19/Nov/2016:16:30:36 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [19/Nov/2016:16:30:37 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.6.164 (73.81.115.197) - - [19/Nov/2016:16:30:52 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.6.164 (73.81.115.197) - - [19/Nov/2016:16:30:57 +0000] "GET /games HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.6.164 (73.81.115.197) - - [19/Nov/2016:16:30:57 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/games" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+::1 (-) - - [19/Nov/2016:16:31:53 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:31:54 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:31:58 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:31:59 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:32:00 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:32:57 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:15 +0000] "GET /games HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:15 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/games" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:17 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:18 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:25 +0000] "GET /favicon.ico HTTP/1.1" 200 132 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+127.0.0.1 (-) - - [19/Nov/2016:16:33:27 +0000] "GET / HTTP/1.1" 200 267 "-" "Python-urllib/2.7"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:30 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:33:30 +0000] "GET /favicon.ico HTTP/1.1" 200 132 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:28 +0000] "GET / HTTP/1.1" 200 267 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:28 +0000] "GET /favicon.ico HTTP/1.1" 200 132 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+127.0.0.1 (-) - - [19/Nov/2016:16:34:34 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:34 +0000] "GET / HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:34 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+127.0.0.1 (-) - - [19/Nov/2016:16:34:35 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [19/Nov/2016:16:34:36 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+127.0.0.1 (-) - - [19/Nov/2016:16:34:37 +0000] "GET / HTTP/1.1" 500 527 "-" "Python-urllib/2.7"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:43 +0000] "GET /games HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:43 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/games" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:46 +0000] "GET /games/ HTTP/1.1" 500 527 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+172.31.60.58 (73.81.115.197) - - [19/Nov/2016:16:34:46 +0000] "GET /favicon.ico HTTP/1.1" 500 527 "http://smarty-game.pgj9zpmqcy.us-east-1.elasticbeanstalk.com/games/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/49.0.2623.112 Safari/537.36"
+::1 (-) - - [19/Nov/2016:16:35:34 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:35:43 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:35:44 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:35:46 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:35:47 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+::1 (-) - - [19/Nov/2016:16:35:48 +0000] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.4.23 (Amazon) mod_wsgi/3.5 Python/2.7.12 (internal dummy connection)"
+
+
+
+-------------------------------------
+/var/log/eb-activity.log
+-------------------------------------
+[2016-11-19T16:34:26.607Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPreBuild/Infra-EmbeddedPreBuild] : Completed activity.
+[2016-11-19T16:34:26.623Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPreBuild] : Completed activity.
+[2016-11-19T16:34:26.623Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook] : Starting activity...
+[2016-11-19T16:34:26.623Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/01new.py] : Starting activity...
+[2016-11-19T16:34:27.032Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/01new.py] : Completed activity.
+[2016-11-19T16:34:27.032Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/02unzip.py] : Starting activity...
+[2016-11-19T16:34:27.454Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/02unzip.py] : Completed activity. Result:
+  Archive:  /opt/elasticbeanstalk/deploy/appsource/source_bundle
+  d6762a18277aa7cda5b55f0e52cbe4c7b3132ca2
+    inflating: /opt/python/ondeck/app/.gitignore  
+    inflating: /opt/python/ondeck/app/application.py  
+    inflating: /opt/python/ondeck/app/flaskr.py  
+    inflating: /opt/python/ondeck/app/requirements.txt  
+[2016-11-19T16:34:27.454Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/03deploy.py] : Starting activity...
+[2016-11-19T16:34:27.933Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/03deploy.py] : Completed activity. Result:
+  Requirement already satisfied (use --upgrade to upgrade): Flask==0.10.1 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 1))
+  Requirement already satisfied (use --upgrade to upgrade): Flask-Cors==3.0.2 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 2))
+  Requirement already satisfied (use --upgrade to upgrade): Flask-PyMongo==0.4.1 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 3))
+  Requirement already satisfied (use --upgrade to upgrade): Jinja2==2.8 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 4))
+  Requirement already satisfied (use --upgrade to upgrade): MarkupSafe==0.23 in /opt/python/run/venv/lib64/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 5))
+  Requirement already satisfied (use --upgrade to upgrade): Werkzeug==0.11.11 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 6))
+  Requirement already satisfied (use --upgrade to upgrade): argparse==1.2.1 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 7))
+  Requirement already satisfied (use --upgrade to upgrade): itsdangerous==0.24 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 8))
+  Requirement already satisfied (use --upgrade to upgrade): pymongo==3.3.1 in /opt/python/run/venv/lib64/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 9))
+  Requirement already satisfied (use --upgrade to upgrade): six==1.10.0 in /opt/python/run/venv/lib/python2.7/site-packages (from -r /opt/python/ondeck/app/requirements.txt (line 10))
+  Requirement already satisfied (use --upgrade to upgrade): wsgiref==0.1.2 in /usr/lib64/python2.7 (from -r /opt/python/ondeck/app/requirements.txt (line 11))
+  You are using pip version 7.1.2, however version 9.0.1 is available.
+  You should consider upgrading via the 'pip install --upgrade pip' command.
+[2016-11-19T16:34:27.934Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/04configen.py] : Starting activity...
+[2016-11-19T16:34:29.787Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook/04configen.py] : Completed activity.
+[2016-11-19T16:34:29.787Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/AppDeployPreHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/pre.
+[2016-11-19T16:34:29.787Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPostBuild] : Starting activity...
+[2016-11-19T16:34:30.049Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Starting activity...
+[2016-11-19T16:34:30.049Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPostBuild/Infra-EmbeddedPostBuild] : Completed activity.
+[2016-11-19T16:34:30.065Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/EbExtensionPostBuild] : Completed activity.
+[2016-11-19T16:34:30.065Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/InfraCleanEbextension] : Starting activity...
+[2016-11-19T16:34:30.066Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0/InfraCleanEbextension] : Completed activity. Result:
+  Cleaned ebextensions subdirectories from /opt/python/ondeck/app.
+[2016-11-19T16:34:30.066Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage0] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy stage 0 completed
+[2016-11-19T16:34:30.066Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1] : Starting activity...
+[2016-11-19T16:34:30.066Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook] : Starting activity...
+[2016-11-19T16:34:30.067Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook/01flip.py] : Starting activity...
+[2016-11-19T16:34:38.532Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook/01flip.py] : Completed activity. Result:
+  httpd: stopped
+  httpd: started
+  httpd                            RUNNING   pid 15854, uptime 0:00:03
+  2016-11-19 16:34:38,526 INFO     Apache is running, but root page is not responding in 3 seconds.
+[2016-11-19T16:34:38.532Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Starting activity...
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook/02create_pids_for_monitoring.sh] : Completed activity. Result:
+  + chmod 0755 /var/run/httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --proxy httpd
+  + /opt/elasticbeanstalk/bin/healthd-track-pidfile --name application --location /opt/python/run/supervisord.pid
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployEnactHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/enact.
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployPostHook] : Starting activity...
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1/AppDeployPostHook] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/hooks/appdeploy/post.
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AppDeployStage1] : Completed activity. Result:
+  Application version switch - Command CMD-AppDeploy stage 1 completed
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter] : Starting activity...
+[2016-11-19T16:34:38.631Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter/ConfigLogRotation] : Starting activity...
+[2016-11-19T16:34:38.632Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter/ConfigLogRotation/10-config.sh] : Starting activity...
+[2016-11-19T16:34:38.753Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter/ConfigLogRotation/10-config.sh] : Completed activity. Result:
+  Disabled forced hourly log rotation.
+[2016-11-19T16:34:38.753Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter/ConfigLogRotation] : Completed activity. Result:
+  Successfully execute hooks in directory /opt/elasticbeanstalk/addons/logpublish/hooks/config.
+[2016-11-19T16:34:38.753Z] INFO  [15715] - [Application update app-d676-161119_163416@7/AddonsAfter] : Completed activity.
+[2016-11-19T16:34:38.753Z] INFO  [15715] - [Application update app-d676-161119_163416@7] : Completed activity. Result:
+  Application update - Command CMD-AppDeploy succeeded
+[2016-11-19T16:35:32.956Z] INFO  [15965] - [CMD-TailLogs] : Starting activity...
+[2016-11-19T16:35:32.956Z] INFO  [15965] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2016-11-19T16:35:32.956Z] INFO  [15965] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2016-11-19T16:35:32.957Z] INFO  [15965] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2016-11-19T16:35:32.957Z] INFO  [15965] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+[2016-11-19T16:35:33.206Z] INFO  [15965] - [CMD-TailLogs/TailLogs/TailLogs] : Completed activity.
+[2016-11-19T16:35:33.206Z] INFO  [15965] - [CMD-TailLogs/TailLogs] : Completed activity. Result:
+  CMD-TailLogs - stage 0 - Command CMD-TailLogs stage 0 completed
+[2016-11-19T16:35:33.206Z] INFO  [15965] - [CMD-TailLogs/AddonsAfter] : Starting activity...
+[2016-11-19T16:35:33.206Z] INFO  [15965] - [CMD-TailLogs/AddonsAfter] : Completed activity.
+[2016-11-19T16:35:33.206Z] INFO  [15965] - [CMD-TailLogs] : Completed activity. Result:
+  CMD-TailLogs - Command CMD-TailLogs succeeded
+[2016-11-19T16:35:44.738Z] INFO  [15981] - [CMD-TailLogs] : Starting activity...
+[2016-11-19T16:35:44.739Z] INFO  [15981] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2016-11-19T16:35:44.739Z] INFO  [15981] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2016-11-19T16:35:44.739Z] INFO  [15981] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2016-11-19T16:35:44.739Z] INFO  [15981] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+[2016-11-19T16:35:44.944Z] INFO  [15981] - [CMD-TailLogs/TailLogs/TailLogs] : Completed activity.
+[2016-11-19T16:35:44.944Z] INFO  [15981] - [CMD-TailLogs/TailLogs] : Completed activity. Result:
+  CMD-TailLogs - stage 0 - Command CMD-TailLogs stage 0 completed
+[2016-11-19T16:35:44.945Z] INFO  [15981] - [CMD-TailLogs/AddonsAfter] : Starting activity...
+[2016-11-19T16:35:44.945Z] INFO  [15981] - [CMD-TailLogs/AddonsAfter] : Completed activity.
+[2016-11-19T16:35:44.945Z] INFO  [15981] - [CMD-TailLogs] : Completed activity. Result:
+  CMD-TailLogs - Command CMD-TailLogs succeeded
+[2016-11-19T16:36:07.121Z] INFO  [16001] - [CMD-TailLogs] : Starting activity...
+[2016-11-19T16:36:07.121Z] INFO  [16001] - [CMD-TailLogs/AddonsBefore] : Starting activity...
+[2016-11-19T16:36:07.121Z] INFO  [16001] - [CMD-TailLogs/AddonsBefore] : Completed activity.
+[2016-11-19T16:36:07.122Z] INFO  [16001] - [CMD-TailLogs/TailLogs] : Starting activity...
+[2016-11-19T16:36:07.122Z] INFO  [16001] - [CMD-TailLogs/TailLogs/TailLogs] : Starting activity...
+
+
+
+-------------------------------------
+/var/log/eb-commandprocessor.log
+-------------------------------------
+[2016-11-19T16:34:25.755Z] INFO  [15715] : Running leader election...
+[2016-11-19T16:34:26.009Z] INFO  [15715] : Instance is Leader.
+[2016-11-19T16:34:26.009Z] DEBUG [15715] : Loaded 6 actions for stage 0.
+[2016-11-19T16:34:26.009Z] INFO  [15715] : Running 1 of 6 actions: InfraWriteConfig...
+[2016-11-19T16:34:26.012Z] INFO  [15715] : Running 2 of 6 actions: DownloadSourceBundle...
+[2016-11-19T16:34:26.330Z] INFO  [15715] : Running 3 of 6 actions: EbExtensionPreBuild...
+[2016-11-19T16:34:26.623Z] INFO  [15715] : Running 4 of 6 actions: AppDeployPreHook...
+[2016-11-19T16:34:29.787Z] INFO  [15715] : Running 5 of 6 actions: EbExtensionPostBuild...
+[2016-11-19T16:34:30.065Z] INFO  [15715] : Running 6 of 6 actions: InfraCleanEbextension...
+[2016-11-19T16:34:30.066Z] INFO  [15715] : Running stage 1 of command CMD-AppDeploy...
+[2016-11-19T16:34:30.066Z] DEBUG [15715] : Loaded 2 actions for stage 1.
+[2016-11-19T16:34:30.066Z] INFO  [15715] : Running 1 of 2 actions: AppDeployEnactHook...
+[2016-11-19T16:34:38.631Z] INFO  [15715] : Running 2 of 2 actions: AppDeployPostHook...
+[2016-11-19T16:34:38.631Z] INFO  [15715] : Running AddonsAfter for command CMD-AppDeploy...
+[2016-11-19T16:34:38.753Z] INFO  [15715] : Command CMD-AppDeploy succeeded!
+[2016-11-19T16:34:38.753Z] INFO  [15715] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[]}]}
+[2016-11-19T16:35:32.950Z] DEBUG [15965] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:35:32.950Z] DEBUG [15965] : Checking if the command processor should execute...
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Checking whether the command is applicable to instance (i-f81063f6)..
+[2016-11-19T16:35:32.954Z] INFO  [15965] : Command is applicable to this instance (i-f81063f6)..
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Checking if the received command stage is valid..
+[2016-11-19T16:35:32.954Z] INFO  [15965] : No stage_num in command. Valid stage..
+[2016-11-19T16:35:32.954Z] INFO  [15965] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAIXC4F7B7R4SXSILA\",\"signature\":\"n+AjSNgPNVRP5Em8jOG9GVjLKs8=\",\"security_token\":\"FQoDYXdzEEoaDBYyUDwLpwzSdXVcDiKVAwQX\\\/HgYUWT4S72e3wuZnqGmP5HW\\\/miIHkBTN9vYN2dyG9Q\\\/cxKFp6Xa+T5bNasixpOAhhqlDQxIcCG1l+gHqZQa8fP0ojZlLBQ+S4wpxMDGje+7VPnp7cPCDEqzYFjMe92ujlxgwFC5i2LESlQSF46e8+0rHQFV93efIeyGw9QNzs\\\/q4T8SJOEt7L2EAVNnj5dbRRfIf\\\/llHWHGKewcX+gSXenL8dw9QfqiiJ2oyTpIditfvej6R+HeNhr3tQ7jA7OFe8KgtbrwiSNdkLbLKGq89Tp+Yjxk\\\/swjF+5+HAj3sMbmvm8BOUv1\\\/NGjXSI\\\/XtHYNawptBdd0BLbDsAKkxHGM1tt\\\/YEd5\\\/GuJEusjKAMZNqZ9NrpedEEV\\\/SKkYvPSrHP6FCm\\\/9wssbRu4to3GKr\\\/fsI2BXKTQeoIq8H9+BSrMi1C\\\/E11gHlZliYnLPSZgGM5aqK0KrhofQ9fJKijWlgkZX3JuUBAlZgE4ZloW3afTrrenGL6x+f5TItl4nw1v7zKzw15L3I4id9ew\\\/BeMbHLkljQWijS\\\/sHBBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNi0xMS0xOVQxNzowNTozMC44MzNaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy1lYXN0LTEtNDg1MjIwMTk4MjgyIl0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-f81063f6"],"data":"2f60415c-ae76-11e6-abe2-2d84bf1e46e3","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"2f60415c-ae76-11e6-abe2-2d84bf1e46e3","command_timeout":"600"}
+[2016-11-19T16:35:32.954Z] INFO  [15965] : Command processor should execute command.
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Storing current stage..
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Stage_num does not exist. Not saving null stage. Returning..
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:35:32.954Z] DEBUG [15965] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2016-11-19T16:35:32.955Z] DEBUG [15965] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2016-11-19T16:35:32.955Z] INFO  [15965] : Found enabled addons: ["logpublish"].
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Updating Command definition of addon logpublish.
+[2016-11-19T16:35:32.956Z] DEBUG [15965] : Loaded definition of Command CMD-TailLogs.
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Executing CMD-TailLogs
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Executing command: CMD-TailLogs...
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Executing command CMD-TailLogs activities...
+[2016-11-19T16:35:32.956Z] DEBUG [15965] : Setting environment variables..
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Running AddonsBefore for command CMD-TailLogs...
+[2016-11-19T16:35:32.956Z] DEBUG [15965] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2016-11-19T16:35:32.956Z] INFO  [15965] : Running stage 0 of command CMD-TailLogs...
+[2016-11-19T16:35:32.957Z] DEBUG [15965] : Loaded 1 actions for stage 0.
+[2016-11-19T16:35:32.957Z] INFO  [15965] : Running 1 of 1 actions: TailLogs...
+[2016-11-19T16:35:33.206Z] INFO  [15965] : Running AddonsAfter for command CMD-TailLogs...
+[2016-11-19T16:35:33.206Z] INFO  [15965] : Command CMD-TailLogs succeeded!
+[2016-11-19T16:35:33.207Z] INFO  [15965] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-f81063f6] Successfully finished tailing 5 log(s)","severity":"INFO","timestamp":1479573333207}]}]}
+[2016-11-19T16:35:44.733Z] DEBUG [15981] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:35:44.733Z] DEBUG [15981] : Checking if the command processor should execute...
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Checking whether the command is applicable to instance (i-f81063f6)..
+[2016-11-19T16:35:44.736Z] INFO  [15981] : Command is applicable to this instance (i-f81063f6)..
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Checking if the received command stage is valid..
+[2016-11-19T16:35:44.736Z] INFO  [15981] : No stage_num in command. Valid stage..
+[2016-11-19T16:35:44.736Z] INFO  [15981] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAJUXLQJSXV35NPTHQ\",\"signature\":\"4cMM630ASDPxieyxJ0uFjRrj4UM=\",\"security_token\":\"FQoDYXdzEEoaDE3XbXaAoxBeEyJq5SKVAyY50EcGftVAD6BMa+28sZPWVOu5ZMFy08FjeKdxjkDbQoIX4k2Vz97afDlnqIa31z00qiYceVF1LQ+goTJA9l3wNleo6X+yxRSwWOvYzQOhVwL3\\\/g\\\/1t1WwwCHiEVT43qZDE9O6wh7GxNNpqsu+w9IbNmxV4rWfP+ub5+9iPBMBzHJJY9tdShMFU9K69qqGbA0nGHsxc3ggvBz2vke2zPEAPPYT4O49w4WFHT6wbfC4xiKFS0nsoSLFynlMy1UPOvK5\\\/mcbIg27OZFeAKF6OE\\\/2z5qOI+vyZNpwahiPJ+2W3kaCJMBrp+fkopYL6EGVmuKMXGlhyHcWecUOFmVUauurpb32mfDKncHXhUZHKjhYNP9WfP1k7I952JbWzg6oMA6h+3N5wcTqAECtLOYVRT2DteXVWtTxyLsKaufNte6tBoAD5m8aqN08KF637jFllUANeesF2anSOHGPIT0mph5Y+5EbplRJlhFHFyjoTFXv9mId1bTtoXYKl83sNkDOaw2wsbNTdGauuceBRkCMGGL0emj7qSje\\\/sHBBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNi0xMS0xOVQxNzowNTo0Mi43ODVaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy1lYXN0LTEtNDg1MjIwMTk4MjgyIl0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-f81063f6"],"data":"366b1533-ae76-11e6-8396-3b023dbec8b8","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"366b1533-ae76-11e6-8396-3b023dbec8b8","command_timeout":"600"}
+[2016-11-19T16:35:44.736Z] INFO  [15981] : Command processor should execute command.
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Storing current stage..
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Stage_num does not exist. Not saving null stage. Returning..
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:35:44.736Z] DEBUG [15981] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2016-11-19T16:35:44.737Z] DEBUG [15981] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2016-11-19T16:35:44.737Z] INFO  [15981] : Found enabled addons: ["logpublish"].
+[2016-11-19T16:35:44.738Z] INFO  [15981] : Updating Command definition of addon logpublish.
+[2016-11-19T16:35:44.738Z] DEBUG [15981] : Loaded definition of Command CMD-TailLogs.
+[2016-11-19T16:35:44.738Z] INFO  [15981] : Executing CMD-TailLogs
+[2016-11-19T16:35:44.739Z] INFO  [15981] : Executing command: CMD-TailLogs...
+[2016-11-19T16:35:44.739Z] INFO  [15981] : Executing command CMD-TailLogs activities...
+[2016-11-19T16:35:44.739Z] DEBUG [15981] : Setting environment variables..
+[2016-11-19T16:35:44.739Z] INFO  [15981] : Running AddonsBefore for command CMD-TailLogs...
+[2016-11-19T16:35:44.739Z] DEBUG [15981] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2016-11-19T16:35:44.739Z] INFO  [15981] : Running stage 0 of command CMD-TailLogs...
+[2016-11-19T16:35:44.739Z] DEBUG [15981] : Loaded 1 actions for stage 0.
+[2016-11-19T16:35:44.739Z] INFO  [15981] : Running 1 of 1 actions: TailLogs...
+[2016-11-19T16:35:44.944Z] INFO  [15981] : Running AddonsAfter for command CMD-TailLogs...
+[2016-11-19T16:35:44.945Z] INFO  [15981] : Command CMD-TailLogs succeeded!
+[2016-11-19T16:35:44.945Z] INFO  [15981] : Command processor returning results: 
+{"status":"SUCCESS","api_version":"1.0","results":[{"status":"SUCCESS","msg":"","returncode":0,"events":[{"msg":"[Instance: i-f81063f6] Successfully finished tailing 5 log(s)","severity":"INFO","timestamp":1479573344945}]}]}
+[2016-11-19T16:36:07.116Z] DEBUG [16001] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:36:07.116Z] DEBUG [16001] : Checking if the command processor should execute...
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Checking whether the command is applicable to instance (i-f81063f6)..
+[2016-11-19T16:36:07.119Z] INFO  [16001] : Command is applicable to this instance (i-f81063f6)..
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Checking if the received command stage is valid..
+[2016-11-19T16:36:07.119Z] INFO  [16001] : No stage_num in command. Valid stage..
+[2016-11-19T16:36:07.119Z] INFO  [16001] : Received command CMD-TailLogs: {"execution_data":"{\"aws_access_key_id\":\"ASIAITSCKEH4VVEM6WUA\",\"signature\":\"hQ\\\/+KNzGnQitvXTgt4EIWUvAaRw=\",\"security_token\":\"FQoDYXdzEEoaDAMDrRzCn9Mt3vegXiKVAx\\\/jDR\\\/I7r1iMUlEl7oKDKuwI9fYTKrKmjymUkniVkui1qQseLAiPsIm8pOHff5tPRKGO3wT87mgzieHiszfKx35nXm36ygFEILqn6pJJkI2Wk+jElRwjwpUUMq0th5yjfVhf8bfuUyL2jKUjUxlombirUaA1jwqoPqd92uJHl6Ve3GfUkOIPy1TxcvcGrMiFP+J\\\/JthqUyDO7\\\/149Zb9WoXmRZGQ3l+E5f3Orl14H74CHcFbDplHXxVZjPLv7P18s4BufwTMicPnBrn3Lim+H5umcOTssmwQFPeilogvMWI3rs14Fw4nI93ch0ncr7J\\\/OlyT1JKgyWjDilaqmWYWWyd2tF8zdffHFvDXa7UvmIbUHmv6NFCfyYKQvostzWpmm3dFKoBKZywSOurXCaippbb8MU7s1wi6Oua\\\/dFtoafsAEJFpceocHH0hdYFcLuQfFWTt5xHkBB9IhXGzhoFZYdl+Kl+PjyEgBy+buHAlreCh1O77m48wrvZxlpZvPs9WgadMxFz53q\\\/VJBCQPc\\\/aVDDGxQsDij1\\\/sHBBQ==\",\"policy\":\"eyJleHBpcmF0aW9uIjoiMjAxNi0xMS0xOVQxNzowNjowNS4yNzFaIiwiY29uZGl0aW9ucyI6W1sic3RhcnRzLXdpdGgiLCIkeC1hbXotbWV0YS10aW1lX3N0YW1wIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLXB1Ymxpc2hfbWVjaGFuaXNtIiwiIl0sWyJzdGFydHMtd2l0aCIsIiRrZXkiLCJyZXNvdXJjZXNcL2Vudmlyb25tZW50c1wvbG9nc1wvIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWJhdGNoX2lkIiwiIl0sWyJzdGFydHMtd2l0aCIsIiR4LWFtei1tZXRhLWZpbGVfbmFtZSIsIiJdLFsic3RhcnRzLXdpdGgiLCIkeC1hbXotc2VjdXJpdHktdG9rZW4iLCIiXSxbInN0YXJ0cy13aXRoIiwiJENvbnRlbnQtVHlwZSIsIiJdLFsiZXEiLCIkYnVja2V0IiwiZWxhc3RpY2JlYW5zdGFsay11cy1lYXN0LTEtNDg1MjIwMTk4MjgyIl0sWyJlcSIsIiRhY2wiLCJwcml2YXRlIl1dfQ==\"}","instance_ids":["i-f81063f6"],"data":"43f28574-ae76-11e6-a6a6-95bde4a6746c","command_name":"CMD-TailLogs","api_version":"1.0","resource_name":"AWSEBAutoScalingGroup","request_id":"43f28574-ae76-11e6-a6a6-95bde4a6746c","command_timeout":"600"}
+[2016-11-19T16:36:07.119Z] INFO  [16001] : Command processor should execute command.
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Storing current stage..
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Stage_num does not exist. Not saving null stage. Returning..
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Reading config file: /etc/elasticbeanstalk/.aws-eb-stack.properties
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_ContainerConfigFileContent||commands..
+[2016-11-19T16:36:07.119Z] DEBUG [16001] : Retrieving metadata for key: AWS::ElasticBeanstalk::Ext||_API||_Commands..
+[2016-11-19T16:36:07.120Z] INFO  [16001] : Found enabled addons: ["logpublish"].
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Updating Command definition of addon logpublish.
+[2016-11-19T16:36:07.121Z] DEBUG [16001] : Loaded definition of Command CMD-TailLogs.
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Executing CMD-TailLogs
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Executing command: CMD-TailLogs...
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Executing command CMD-TailLogs activities...
+[2016-11-19T16:36:07.121Z] DEBUG [16001] : Setting environment variables..
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Running AddonsBefore for command CMD-TailLogs...
+[2016-11-19T16:36:07.121Z] DEBUG [16001] : Running stages of Command CMD-TailLogs from stage 0 to stage 0...
+[2016-11-19T16:36:07.121Z] INFO  [16001] : Running stage 0 of command CMD-TailLogs...
+[2016-11-19T16:36:07.122Z] DEBUG [16001] : Loaded 1 actions for stage 0.
+[2016-11-19T16:36:07.122Z] INFO  [16001] : Running 1 of 1 actions: TailLogs...
+
+
+

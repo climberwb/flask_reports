@@ -4,14 +4,14 @@ import os
 from flask import Flask
 from flask import jsonify
 from flask import request
-from flask_cors import CORS, cross_origin
+# from flask_cors import CORS, cross_origin
 
 # from flask_pymongo import PyMongo
 import pymongo
 from pymongo import MongoClient
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
 # tutorial
 # client = MongoClient('mongodb://ImASmarty:12345@dbh44.mlab.com:27447')
 client = pymongo.MongoClient('dbh44.mlab.com', 27447)
