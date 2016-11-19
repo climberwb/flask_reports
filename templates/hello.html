@@ -31,15 +31,14 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
         var addItem = function(){             
-        
-                let attribute_section = $(this).parent().parent().clone()
+                
+                let attribute_section = $(this).parent().parent().clone(true)
                 $(this).parent().parent().parent().append(attribute_section);
                 return attribute_section
         }
         $( document ).ready(function() {
             $(".add-item").on( "click", function() {
                 let element = addItem.call(this);
-                element[0].onClick(addItem);
             });
             $(".remove-item").on( "click", function() {
                  $(this).parent().parent().remove();
