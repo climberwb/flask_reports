@@ -13,16 +13,15 @@ from pymongo import MongoClient
 app = Flask(__name__)
 CORS(app)
 # tutorial
-# client = MongoClient('mongodb://ImASmarty:12345@dbh44.mlab.com:27447')
 client = pymongo.MongoClient('dbh44.mlab.com', 27447)
 db = client['attempts']
-db.authenticate('ImASmarty', '12345')
+db.authenticate(os.environ["DB_USERNAME"], os.environ["DB_PASSWORD"])
 db.games.ensure_index('gameId', unique=True)
 
 app.config['MONGO_DBNAME'] = 'attempts'
-app.config['DB_USERNAME'] = 'ImASmarty'
-app.config['DB_PASSWORD'] = '12345'
-app.config['MONGO_URI'] = 'mongodb://ImASmarty:12345@dbh44.mlab.com:27447/attempts'
+app.config['DB_USERNAME'] = os.environ["DB_USERNAME"]
+app.config['DB_PASSWORD'] = os.environ["DB_PASSWORD"]
+# app.config['MONGO_URI'] = ''
 
 # mongo = PyMongo(app)
 # mongo = client
@@ -32,8 +31,6 @@ app.config['MONGO_URI'] = 'mongodb://ImASmarty:12345@dbh44.mlab.com:27447/attemp
 @app.route('/games', methods=['GET'])
 @cross_origin()
 def get_all_games():
-    print'dfdf'
-    # games = mongo.db.games
     games = db.games
     output = []
     for s in games.find({}):
@@ -134,14 +131,14 @@ def statistics_for_all_games_per_level():
                     }
     
     aggregate_by_level =   { "$group": { 
-                      "_id" :  "$_id.gameId",
-                      "levels": { 
-                          "$push": { 
-                             "level":"$_id.level"
-                             }
-                        }
-                    }    
-                }
+                                  "_id" :  "$_id.gameId",
+                                  "levels": { 
+                                      "$push": { 
+                                         "level":"$_id.level"
+                                         }
+                                    }
+                                }    
+                            }
                   
     for key_obj in get_skeys:
         #### build group_options dict
