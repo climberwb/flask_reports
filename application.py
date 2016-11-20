@@ -56,6 +56,7 @@ def get_one_star(gameId):
 @app.route('/game', methods=['POST'])
 def add_star():
     games = db.games
+    print request.json
     gameId = request.json['gameId']
     general_game_attributes = request.json['generalGameAttributes']
     specific_game_attributes = request.json['specificGameAttributes']

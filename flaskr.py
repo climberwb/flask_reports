@@ -55,9 +55,12 @@ def get_one_star(gameId):
 @app.route('/games', methods=['POST'])
 def add_game():
     games = db.games
+    print 'in post games'
+    print request.json
     gameId = request.json['gameId']
     general_game_attributes = ["userId","level"]
-    specific_game_attributes = request.json['specificGameAttributes']#request.json['specificGameAttributes']
+    # ensures unique attributes
+    specific_game_attributes = list(set(request.json['specificGameAttributes']))#request.json['specificGameAttributes']
     game_id = games.insert({'gameId': gameId, \
                             'generalGameAttributes': general_game_attributes, \
                             'specificGameAttributes':specific_game_attributes, \
@@ -162,7 +165,7 @@ def statistics_for_all_games_per_level():
     return jsonify({'result' : output})
 
 ###### TEMPLATES ####################
-@app.route('/games/form/')
+@app.route('/')
 def hello():
     return render_template('hello.html')
 
