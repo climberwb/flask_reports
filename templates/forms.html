@@ -1,0 +1,128 @@
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0-alpha1/JSXTransformer.js"></script>
+</head>
+
+<body>
+  <div id="root">
+      <!-- This div's content will be managed by React. -->
+    </div>
+    
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react@15/dist/react.js"></script>
+    <!--<script src="https://unpkg.com/react-dom@15/dist/react-dom.js"></script>-->
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>-->
+
+    <script type="text/jsx">
+    var GameInput = React.createClass({ 
+
+        removeAttribute: function(){
+         console.log(this.props.index+1);
+          this.props.removeAttribute(this.props.index); 
+        },
+        shouldComponentUpdate() {
+             return true;
+         },
+        render: function(){
+            let plusStyle = {'paddingRight':'4px'};
+            console.log('inside attr');
+            console.log(this.props);
+            return (
+                          <div className="form-group form-group-sm" >
+                            <label className="col-sm-2 control-label" for="">attribute {this.props.index+1}</label>
+                            <div className="col-sm-7">
+                              <div>{this.props.attribute}</div>
+                              <input className="form-control " type="text" id="" placeholder="Small input" value={this.props.attribute}  />
+                            </div>
+                            <div className="col-sm-1">
+                                  <i className="fa fa-plus fa-1 add-item" aria-hidden="true" style={plusStyle} onClick={this.props.addAttribute} ></i>
+                                  <i className="fa fa-minus fa-1 remove-item" aria-hidden="true" onClick={this.removeAttribute}></i>
+                              </div>
+                          </div>
+                )
+        }
+    })
+     var GameForm = React.createClass({
+       
+        shouldComponentUpdate() {
+             return true;
+         },
+         render: function(){
+             console.log(this.props);
+             console.log('gameForm')
+             let lengthStore = this.props.gameAttributes.length;
+             console.log(lengthStore);
+             return (<div className="form-horizontal" id="game-form">
+                        <div className="form-group form-group-lg">
+                            <label className="col-sm-2 control-label" for="formGroupInputLarge">Game Name (GameId)</label>
+                            <div className="col-sm-7">
+                              <input className="form-control game-attr" type="text" id="" defaultValue={this.props.gameAttributes[0]} placeholder="Large input" />
+                            </div>
+                        </div>
+                        {this.props.gameAttributes.slice(1,lengthStore).map((attr,i)=><GameInput attribute={attr} 
+                                                                                                addAttribute={this.props.addAttribute}
+                                                                                                    removeAttribute={this.props.removeAttribute}
+                                                                                                    key={i}
+                                                                                                    index={i}
+                                                                                                    i={i}
+                                                                                                     />)}
+                     </div>
+                );
+             
+         }
+     })
+      
+      var Forms = React.createClass({
+        getInitialState: function(){
+        		return {"gameAttributes":['ex. game1','dsd','sds','aa']}
+        },
+        //  componentDidMount: function(){
+        //  },
+        removeAttribute: function(index){
+            console.log('remove');
+            // console.log(this.state.gameAttributes)
+            var copyOfState = Object.assign({}, this.state);
+            console.log(copyOfState);
+            var newArr = [ ...this.state.gameAttributes]
+            console.log(newArr)
+            copyOfState.gameAttributes = copyOfState.gameAttributes.filter((m,i)=>{if(i !=1){return m}});
+            console.log(copyOfState.gameAttributes);
+            this.setState(copyOfState);
+            this.forceUpdate();
+        },
+         addAttribute: function(){
+            this.state.gameAttributes = this.state.gameAttributes.concat([""]);
+            this.setState(this.state);
+         },
+         shouldComponentUpdate() {
+             return true;
+         },
+        
+        render: function() {
+        console.log('inside parent')
+        console.log(this.state)
+         divStyle={overflow:"hidden"}
+          return (
+              <div style={divStyle}>
+                 <h1>Smarty Game</h1>
+                <GameForm {...this.state}
+                         addAttribute={this.addAttribute}
+                        removeAttribute={this.removeAttribute}
+                 />
+            </div>
+          )
+        }
+      });
+      
+      
+      ReactDOM.render(
+        <Forms/>,
+        document.getElementById('root')
+      );
+    </script>
+</body>

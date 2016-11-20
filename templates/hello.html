@@ -55,36 +55,33 @@
                 
                 return attribute_section
         }
-        let ajaxCB = function(results,error){
+        let ajaxCB = function(results,error,resolve){
                         console.log("cb "+results);
                         console.log('cb '+JSON.stringify(error));
                        if(error){
-                         return error;
+                         return resolve({success:false, error:error});
                        }
-                       return results;
+                       return resolve({success:true, data: results});
                      }
-        let sendData = function(type,url,data={},cb){
+        let sendData = function(type,url,data={},cb,resolve){
           console.log(data);
           let response = $.ajax({
-                            // beforeSend: function(xhrObj){
-                            //       xhrObj.setRequestHeader("Content-Type","application/json");
-                            //       xhrObj.setRequestHeader("Accept","application/json");
-                            //   },
                               type: type,
                               url: url,
                               data: JSON.stringify(data,null,'\t'),
                               contentType: 'application/json;charset=UTF-8',
                               success: function(resultData) { 
                                  console.log("success "+resultData);
-                                  return cb(resultData, null);
+                                  return cb(resultData, null,resolve);
                               },
                               error: function(err){
-                                return cb(null, err);
+                                return cb(null, err,resolve);
                               }
                           });
 
         }
         $( document ).ready(function() {
+            let originalForm;                   
             $(".add-item").on( "click", function() {
                 addItem.call(this);
             });
@@ -97,19 +94,34 @@
                                                   .map(function() {
                                                         return ($(this).val());
                                                       }).get();;
-              console.log(gameAttributes);
               let gameId = gameAttributes.splice(0,1)[0];
               
               let specificGameAttributes = {'specificGameAttributes':gameAttributes,"gameId":gameId};
-              console.log(specificGameAttributes);
-              console.log(sendData(
-                    "POST",
-                    "/games",
-                    specificGameAttributes,
-                    ajaxCB
-                ));
+//               var p = new Promise((resolve, reject) => resolve(5));  
+// p.            then((val) => console.log(val)); // 5 
+              var p = new Promise((resolve, reject)=>{
+                  sendData(
+                            "POST",
+                            "/games",
+                            specificGameAttributes,
+                            ajaxCB,
+                            resolve
+                        )
+              });
+              p.then((response)=>{
+                console.log('after everything '+response);
+                if(response.success){
+                  cloneForm = originalForm//.clone(true);
+                  $('#game-form').remove();
+                  $('h1').remove();
+                  $('body').prepend(cloneForm);
+                  $('body').prepend("<h1>Smarty Game</h1>");
+                  originalForm = cloneForm;
+                }
+              })
               
             })
+            originalForm= $("#game-form").clone(true); 
         });
     </script>
 </body>

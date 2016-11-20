@@ -166,8 +166,8 @@ def statistics_for_all_games_per_level():
 
 ###### TEMPLATES ####################
 @app.route('/')
-def hello():
-    return render_template('hello.html')
+def forms():
+    return render_template('forms.html')
 
 
 if __name__ == '__main__':
