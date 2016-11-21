@@ -71,11 +71,12 @@
                               data: JSON.stringify(data,null,'\t'),
                               contentType: 'application/json;charset=UTF-8',
                               success: function(resultData) { 
-                                 console.log("success "+resultData);
-                                  return cb(resultData, null,resolve);
+                                 console.log("success "+resultData.result);
+                                  // return cb(resultData, null,resolve);
                               },
                               error: function(err){
-                                return cb(null, err,resolve);
+                                console.log("success "+resultData.result);
+                                // return cb(null, err,resolve);
                               }
                           });
 

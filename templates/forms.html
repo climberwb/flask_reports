@@ -19,6 +19,30 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>-->
 
     <script type="text/jsx">
+    var DropDown = React.createClass({ 
+        render(){
+            return (
+                <div><a href="#">
+                {this.props.gameId}
+                </a></div>
+                );
+        }
+    });
+    var AddAttempt = React.createClass({
+        render(){
+            console.log('dfdf');
+            return (
+                    <div>
+                         <div>
+                            return {this.props.games.map((game,i)=>{
+                                console.log(game);
+                                return <DropDown gameId={game.gameId} generalGameAttributes={game.generalGameAttributes} specificeGameAttributes={game.specificeGameAttributes} key={i}/>
+                            })}
+                          </div>
+                      </div>
+                )
+        }
+    })
     var GameInput = React.createClass({ 
 
         removeAttribute: function(){
@@ -32,15 +56,15 @@
             let plusStyle = {'paddingRight':'4px'};
             console.log('inside attr');
             console.log(this.props);
+         
             return (
                           <div className="form-group form-group-sm" >
                             <label className="col-sm-2 control-label" for="">attribute {this.props.index+1}</label>
                             <div className="col-sm-7">
                               <div>{this.props.attribute}</div>
-                              <input className="form-control " type="text" id="" placeholder="Small input" value={this.props.attribute}  />
+                            {/*<div className="form-control " type="text" id="" placeholder="Small input" value={this.props.attribute} disabled="disabled"  ></div>*/}
                             </div>
                             <div className="col-sm-1">
-                                  <i className="fa fa-plus fa-1 add-item" aria-hidden="true" style={plusStyle} onClick={this.props.addAttribute} ></i>
                                   <i className="fa fa-minus fa-1 remove-item" aria-hidden="true" onClick={this.removeAttribute}></i>
                               </div>
                           </div>
@@ -48,7 +72,11 @@
         }
     })
      var GameForm = React.createClass({
-       
+       addAttribute(e){
+           let attr = $('#game-attribute').val();
+           this.props.addAttribute(attr);
+           $('#game-attribute').val("");
+       },
         shouldComponentUpdate() {
              return true;
          },
@@ -61,16 +89,32 @@
                         <div className="form-group form-group-lg">
                             <label className="col-sm-2 control-label" for="formGroupInputLarge">Game Name (GameId)</label>
                             <div className="col-sm-7">
-                              <input className="form-control game-attr" type="text" id="" defaultValue={this.props.gameAttributes[0]} placeholder="Large input" />
+                              <input className="form-control game-attr" type="text" id="gameId" defaultValue={this.props.gameId}  />
                             </div>
                         </div>
-                        {this.props.gameAttributes.slice(1,lengthStore).map((attr,i)=><GameInput attribute={attr} 
-                                                                                                addAttribute={this.props.addAttribute}
-                                                                                                    removeAttribute={this.props.removeAttribute}
-                                                                                                    key={i}
-                                                                                                    index={i}
-                                                                                                    i={i}
+                        <div className="form-group form-group-lg">
+                            <label className="col-sm-2 control-label" for="formGroupInputLarge">Add GameAttribute</label>
+                            <div className="col-sm-7">
+                                <input className="form-control game-attr" type="text" id="game-attribute"   />
+                            </div>
+                            <div className="col-sm-1">
+                                  <i className="fa fa-plus fa-1 remove-item" aria-hidden="true" onClick={this.addAttribute}></i>
+                             </div>
+                        </div>
+                       
+                        {this.props.gameAttributes.map((attr,i)=><GameInput attribute={attr} 
+                                                                            addAttribute={this.props.addAttribute}
+                                                                            removeAttribute={this.props.removeAttribute}
+                                                                            key={i}
+                                                                            index={i}
+                                                                            i={i}
+                                                                            arrLength={lengthStore}
                                                                                                      />)}
+                         <div className="form-group form-group-sm" id="submit-game">
+                              <div className="col-sm-6" >
+                                <button  type="button" className="btn btn-primary pull-right" onClick={this.props.sendGame} >Send Game</button>
+                              </div>
+                          </div>
                      </div>
                 );
              
@@ -79,24 +123,67 @@
       
       var Forms = React.createClass({
         getInitialState: function(){
-        		return {"gameAttributes":['ex. game1','dsd','sds','aa']}
+        		return {"gameId":['ex. game1'],
+        		        "gameAttributes":["score","life"],
+        		        "games":[]
+        		}
         },
-        //  componentDidMount: function(){
-        //  },
+        getGames(){
+            var self = this;
+            $.ajax({
+                          type: "GET",
+                          url: "/games",
+                        //   data: JSON.stringify(data,null,'\t'),
+                          contentType: 'application/json;charset=UTF-8',
+                          success: function(resultData) { 
+                            //  console.log("success "+JSON.stringify(resultData));
+                            //  var games = resultData.result.map((game)=>{"gameId":game.gameId,"generalGameAttributes":game.generalGameAttributes,"specificGameAttributes":game.specificeGameAttributes});
+                                self.state.games = resultData.result;
+                                self.setState(self.state);
+                                self.forceUpdate();
+                          },
+                          error: function(err){
+                              alert(err);
+                            //return cb(null, err,resolve);
+                          }
+                          });    
+        },
+        
+        componentDidMount(){
+            this.getGames();
+        },
+        componentWillRecieveProps(){
+            // this.getGames();
+        },
+        sendGame: function(){
+            let data = {"specificGameAttributes":this.state.gameAttributes,"gameId":$('#gameId').val()};
+            var self = this;
+            $.ajax({
+                          type: "POST",
+                          url: "/games",
+                          data: JSON.stringify(data,null,'\t'),
+                          contentType: 'application/json;charset=UTF-8',
+                          success: function(resultData) { 
+                             console.log("success "+resultData);
+                             self.getGames();
+                             
+                              //return cb(resultData, null,resolve);
+                          },
+                          error: function(err){
+                            //return cb(null, err,resolve);
+                          }
+                          });
+        },
         removeAttribute: function(index){
-            console.log('remove');
-            // console.log(this.state.gameAttributes)
             var copyOfState = Object.assign({}, this.state);
-            console.log(copyOfState);
             var newArr = [ ...this.state.gameAttributes]
-            console.log(newArr)
-            copyOfState.gameAttributes = copyOfState.gameAttributes.filter((m,i)=>{if(i !=1){return m}});
-            console.log(copyOfState.gameAttributes);
+            copyOfState.gameAttributes = newArr.filter((m,i)=>{if(i !=index){
+                return m}});
             this.setState(copyOfState);
             this.forceUpdate();
         },
-         addAttribute: function(){
-            this.state.gameAttributes = this.state.gameAttributes.concat([""]);
+         addAttribute: function(attr){
+            this.state.gameAttributes = this.state.gameAttributes.concat([attr]);
             this.setState(this.state);
          },
          shouldComponentUpdate() {
@@ -104,8 +191,6 @@
          },
         
         render: function() {
-        console.log('inside parent')
-        console.log(this.state)
          divStyle={overflow:"hidden"}
           return (
               <div style={divStyle}>
@@ -113,7 +198,15 @@
                 <GameForm {...this.state}
                          addAttribute={this.addAttribute}
                         removeAttribute={this.removeAttribute}
+                        sendGame={this.sendGame}
                  />
+                 
+                 <AddAttempt
+                   games={this.state.games}
+                   
+                   
+                 />
+                 
             </div>
           )
         }
