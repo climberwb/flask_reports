@@ -19,12 +19,131 @@
     <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>-->
 
     <script type="text/jsx">
-    var DropDown = React.createClass({ 
+    var AggregateTable = React.createClass({
         render(){
+            // if(this.props.aggregate){
+                return(
+                        <span>
+                            djdjd
+                        </span>
+                    )
+            // }else{
+                
+            //}
+        }
+    })
+    var SpecificAttributeItem = React.createClass({
+        
+        render(){
+            let inputS ={marginRight:'5px',marginLeft:'5px'};
+            return(
+                <div className="form-group">
+                    <label  style={inputS} for="">{this.props.attr}</label>
+                    <input type="text" className="form-control" id="" placeholder=""/>
+                  </div>
+                )
+        }
+    })
+    var DropDown = React.createClass({ 
+       getAggregate(gameId){
+           alert(gameId);
+           let url = "/games/aggregate/"+gameId+"/"
+            $.ajax({
+                          type: "GET",
+                          url:url ,
+                        //   data: JSON.stringify(attempt,null,'\t'),
+                          contentType: 'application/json;charset=UTF-8',
+                          success: function(resultData) { 
+                              this.state.aggregate = resultData.result;
+                              this.setState(this.state);
+                            //   alert(JSON.stringify(resultData.result));
+                            //  console.log("success "+JSON.stringify(resultData));
+                            //  var games = resultData.result.map((game)=>{"gameId":game.gameId,"generalGameAttributes":game.generalGameAttributes,"specificGameAttributes":game.specificeGameAttributes});
+                                // self.state.games = resultData.result;
+                                // self.setState(self.state);
+                                // self.forceUpdate();
+                          },
+                          error: function(err){
+                              alert(err);
+                            //return cb(null, err,resolve);
+                          }
+                          });
+           
+       },
+        sendAttempt(id,e){
+            e.preventDefault();
+            var values = $("#"+id).find('input').map(function() {
+                                                 return ($(this).val());
+                                                }).get();
+            var allAttributes = this.props.generalGameAttributes.concat(this.props.specificGameAttributes);
+            let attemptObj={}
+             values.forEach((val,i)=>attemptObj[allAttributes[i]] = val)
+             let attempt={'attempt':attemptObj}
+            //  alert(attempt['level']);
+            var self = this;
+            let url = "/games/"+id.split('-').join(" ")+'/';
+            alert(url);
+            $.ajax({
+                          type: "POST",
+                          url:url ,
+                          data: JSON.stringify(attempt,null,'\t'),
+                          contentType: 'application/json;charset=UTF-8',
+                          success: function(resultData) { 
+                              $("#"+id).find('input').map(function() {
+                                                 return ($(this).val(""));
+                                                }).get();
+                            //   alert(JSON.stringify(resultData.result));
+                            //  console.log("success "+JSON.stringify(resultData));
+                            //  var games = resultData.result.map((game)=>{"gameId":game.gameId,"generalGameAttributes":game.generalGameAttributes,"specificGameAttributes":game.specificeGameAttributes});
+                                // self.state.games = resultData.result;
+                                // self.setState(self.state);
+                                // self.forceUpdate();
+                          },
+                          error: function(err){
+                              alert(err);
+                            //return cb(null, err,resolve);
+                          }
+                          });
+            
+        },
+        render(){
+            let inputS ={marginRight:'5px',marginLeft:'5px'} 
+            let formS ={border:"solid black"}
+            console.log('id')
+            let id = this.props.gameId.split(" ").join("-")
+            console.log(id);
+            let aggregate;
+            if(this.state && this.state.aggregate){
+                aggregate = <AggregateTable aggregate={this.state.aggregate}/>
+            }
+            let aggLink = "/games/aggregate/"+this.props.gameId;
             return (
-                <div id={this.props.gameId}><a href="#">
-                {this.props.gameId} - {this.props.generalGameAttributes} - {this.props.specificGameAttributes}
-                </a></div>
+                <div >
+                <form className="form-inline"style={formS} id={id}>
+                 <h2>
+                  {this.props.gameId}
+                 </h2>
+                  <div className="form-group">
+                    <label  style={inputS}for="">{this.props.generalGameAttributes[0]} </label>
+                    <input type="text" className="form-control"  placeholder=""/>
+                  </div>
+                  <div className="form-group">
+                    <label  style={inputS} for="">{this.props.generalGameAttributes[1]}</label>
+                    <input type="text" className="form-control" id="" placeholder=""/>
+                  </div>
+                  {this.props.specificGameAttributes.map((sp)=>{
+                      return <SpecificAttributeItem attr={sp} />
+                  })}
+                  <div>
+                    <a href={aggLink}>see the aggregate of game: {this.props.gameId}</a>
+                  </div>
+                  <button type="submit" className="btn btn-default" onClick={this.sendAttempt.bind(this,id)}>Send Attempt</button>
+                </form>
+                  <div>
+                    {aggregate}
+                  </div>
+                </div>
+              
                 );
         }
     });
@@ -165,6 +284,7 @@
                           contentType: 'application/json;charset=UTF-8',
                           success: function(resultData) { 
                              console.log("success "+resultData);
+                             $('#gameId').val("");
                              self.getGames();
                              
                               //return cb(resultData, null,resolve);

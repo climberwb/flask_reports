@@ -73,8 +73,12 @@ def add_game():
     
 @app.route('/games/<game_id>/', methods=['POST'])
 def add_attempt(game_id):
+    print 'in add attempt'
     games = db.games
     attempt = request.json["attempt"]
+    for key in attempt:
+        attempt[key] = int(attempt[key])
+    print attempt
     if len(attempt.keys()) >0:
         games.update({"gameId":game_id}, \
                     { "$push": {"attempts": attempt }
@@ -100,6 +104,34 @@ def specific_keys_for_attempts():
           ])
     return get_skeys
    
+   
+@app.route('/games/aggregate/<game_id>/', methods=['GET'])
+def statistics_for_one_games(game_id):
+    get_skeys = specific_keys_for_attempts()
+          
+    group_options  = {
+                        "$group": {
+                            "_id":"$gameId" 
+                        }
+                    }
+                    
+    for key_obj in get_skeys:
+        key_string = key_obj['_id']
+        value_string = "$attempts.%s" %(key_string)
+        value_obj = { "$avg":value_string }
+        group_options["$group"][key_string] = value_obj
+    print group_options
+    game_instance_stats = db.games.aggregate([
+         {"$match":{"gameId":game_id}},
+         { "$unwind": "$attempts" },
+         group_options,
+         {"$sort":{ "_id": 1 } },
+         
+     ])
+
+    output = list(game_instance_stats)
+    return jsonify({'result' : output})  
+    
 @app.route('/games/aggregate/', methods=['GET'])
 def statistics_for_all_games():
     get_skeys = specific_keys_for_attempts()
@@ -115,11 +147,12 @@ def statistics_for_all_games():
         value_string = "$attempts.%s" %(key_string)
         value_obj = { "$avg":value_string }
         group_options["$group"][key_string] = value_obj
-    
+    print group_options
     game_instance_stats = db.games.aggregate([
          { "$unwind": "$attempts" },
          group_options,
          {"$sort":{ "_id": 1 } },
+         
      ])
 
     output = list(game_instance_stats)
