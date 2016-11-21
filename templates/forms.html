@@ -154,6 +154,7 @@
             return (
                     <div>
                          <div>
+                         <h3>Values below must be numerical</h3>
                             return {this.props.games.map((game,i)=>{
                                 console.log(game);
                                 return <DropDown gameId={game.gameId} generalGameAttributes={game.generalGameAttributes} specificGameAttributes={game.specificGameAttributes} key={i}/>
@@ -232,7 +233,7 @@
                                                                                                      />)}
                          <div className="form-group form-group-sm" id="submit-game">
                               <div className="col-sm-6" >
-                                <button  type="button" className="btn btn-primary pull-right" onClick={this.props.sendGame} >Send Game</button>
+                                <button  type="button" className="btn btn-primary pull-right" onClick={this.props.sendGame} >Create Game</button>
                               </div>
                           </div>
                      </div>
@@ -243,8 +244,8 @@
       
       var Forms = React.createClass({
         getInitialState: function(){
-        		return {"gameId":['ex. game1'],
-        		        "gameAttributes":["score","life"],
+        		return {"gameId":['game1'],
+        		        "gameAttributes":["score","correct","incorrect"],
         		        "games":[]
         		}
         },
@@ -316,6 +317,7 @@
           return (
               <div style={divStyle}>
                  <h1>Smarty Game</h1>
+                 <p>the gameId and attributes should only be alpha-numeric values (no periods, hyphens, etc...)</p>
                 <GameForm {...this.state}
                          addAttribute={this.addAttribute}
                         removeAttribute={this.removeAttribute}
