@@ -46,7 +46,6 @@
     })
     var DropDown = React.createClass({ 
        getAggregate(gameId){
-           alert(gameId);
            let url = "/games/aggregate/"+gameId+"/"
             $.ajax({
                           type: "GET",
@@ -77,18 +76,20 @@
                                                 }).get();
             var allAttributes = this.props.generalGameAttributes.concat(this.props.specificGameAttributes);
             let attemptObj={}
+            
              values.forEach((val,i)=>attemptObj[allAttributes[i]] = val)
              let attempt={'attempt':attemptObj}
+            //  alert(JSON.stringify(attempt));
             //  alert(attempt['level']);
             var self = this;
             let url = "/games/"+id.split('-').join(" ")+'/';
-            alert(url);
             $.ajax({
                           type: "POST",
                           url:url ,
                           data: JSON.stringify(attempt,null,'\t'),
                           contentType: 'application/json;charset=UTF-8',
                           success: function(resultData) { 
+                              alert("success");
                               $("#"+id).find('input').map(function() {
                                                  return ($(this).val(""));
                                                 }).get();

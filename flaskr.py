@@ -104,62 +104,8 @@ def specific_keys_for_attempts():
           ])
     return get_skeys
    
-   
-@app.route('/games/aggregate/<game_id>/', methods=['GET'])
-def statistics_for_one_games(game_id):
-    get_skeys = specific_keys_for_attempts()
-          
-    group_options  = {
-                        "$group": {
-                            "_id":"$gameId" 
-                        }
-                    }
-                    
-    for key_obj in get_skeys:
-        key_string = key_obj['_id']
-        value_string = "$attempts.%s" %(key_string)
-        value_obj = { "$avg":value_string }
-        group_options["$group"][key_string] = value_obj
-    print group_options
-    game_instance_stats = db.games.aggregate([
-         {"$match":{"gameId":game_id}},
-         { "$unwind": "$attempts" },
-         group_options,
-         {"$sort":{ "_id": 1 } },
-         
-     ])
-
-    output = list(game_instance_stats)
-    return jsonify({'result' : output})  
-    
-@app.route('/games/aggregate/', methods=['GET'])
-def statistics_for_all_games():
-    get_skeys = specific_keys_for_attempts()
-          
-    group_options  = {
-                        "$group": {
-                            "_id":"$gameId" 
-                        }
-                    }
-                    
-    for key_obj in get_skeys:
-        key_string = key_obj['_id']
-        value_string = "$attempts.%s" %(key_string)
-        value_obj = { "$avg":value_string }
-        group_options["$group"][key_string] = value_obj
-    print group_options
-    game_instance_stats = db.games.aggregate([
-         { "$unwind": "$attempts" },
-         group_options,
-         {"$sort":{ "_id": 1 } },
-         
-     ])
-
-    output = list(game_instance_stats)
-    return jsonify({'result' : output})  
-
-@app.route('/games/aggregate_per_level/', methods=['GET'])
-def statistics_for_all_games_per_level():
+# @app.route('/games/aggregate_per_level/', methods=['GET'])
+def statistics_for_game_per_level(gameId):
     get_skeys = specific_keys_for_attempts()
     group_options  = {
                         "$group": {
@@ -189,18 +135,82 @@ def statistics_for_all_games_per_level():
     
     game_instance_stats = db.games.aggregate([
          { "$unwind": "$attempts" },
+         {"$match":{"gameId":gameId}},
          group_options,
          aggregate_by_level,
          {"$sort":{ "_id": 1 } },
      ])
 
     output = list(game_instance_stats)
-    return jsonify({'result' : output})
+    return output
+    # return jsonify({'result' : output})  
+@app.route('/games/aggregate/<game_id>/', methods=['GET'])
+def statistics_for_one_games(game_id):
+    get_skeys = specific_keys_for_attempts()
+          
+    group_options  = {
+                        "$group": {
+                            "_id":"$gameId" 
+                        }
+                    }
+                    
+    for key_obj in get_skeys:
+        key_string = key_obj['_id']
+        value_string = "$attempts.%s" %(key_string)
+        value_obj = { "$avg":value_string }
+        group_options["$group"][key_string] = value_obj
+    # print group_options
+    game_instance_stats = db.games.aggregate([
+         {"$match":{"gameId":game_id}},
+         { "$unwind": "$attempts" },
+         group_options,
+         {"$sort":{ "_id": 1 } },
+         
+     ])
+
+    output = list(game_instance_stats)
+    output_per_level= statistics_for_game_per_level(game_id)
+    # print output_per_level
+    sorted_output_per_level =  sorted(output_per_level[0]["levels"], key=lambda k: k['level']) 
+    # output_per_level["levels"].sort(key=lambda x: x["level"], reverse=False)
+    return render_template('hello.html',output=output,output_per_level=sorted_output_per_level,game_id=game_id)
+    # return jsonify({'result' : output})  
+    
+@app.route('/games/aggregate/', methods=['GET'])
+def statistics_for_all_games():
+    get_skeys = specific_keys_for_attempts()
+          
+    group_options  = {
+                        "$group": {
+                            "_id":"$gameId" 
+                        }
+                    }
+                    
+    for key_obj in get_skeys:
+        key_string = key_obj['_id']
+        value_string = "$attempts.%s" %(key_string)
+        value_obj = { "$avg":value_string }
+        group_options["$group"][key_string] = value_obj
+    print group_options
+    game_instance_stats = db.games.aggregate([
+         { "$unwind": "$attempts" },
+         group_options,
+         {"$sort":{ "_id": 1 } },
+         
+     ])
+
+    output = list(game_instance_stats)
+    return jsonify({'result' : output})  
+
+
 
 ###### TEMPLATES ####################
 @app.route('/')
 def forms():
     return render_template('forms.html')
+@app.route('/aggregate/view')
+def table():
+    return render_template('hello.html',test="hello")
 
 
 if __name__ == '__main__':

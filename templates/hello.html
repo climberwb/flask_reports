@@ -1,128 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-  <h1 style="">Smarty Game</h1>
-    <div class="form-horizontal" id="game-form">
-      <div class="form-group form-group-lg">
-        <label class="col-sm-2 control-label" for="formGroupInputLarge">Game Name (GameId)</label>
-        <div class="col-sm-7">
-          <input class="form-control game-attr" type="text" id="formGroupInputLarge" placeholder="Large input">
-        </div>
-      </div>
-      <div class="form-group form-group-sm" >
-        <label class="col-sm-2 control-label" for="formGroupInputSmall">game attribute</label>
-        <div class="col-sm-7">
-          <input class="form-control game-attr" type="text" id="formGroupInputSmall" placeholder="Small input">
-        </div>
-        <div class="col-sm-1">
-              <i class="fa fa-plus fa-1 add-item" aria-hidden="true" ></i>
-              <i class="fa fa-minus fa-1 remove-item" aria-hidden="true"></i>
-          </div>
-      </div>
-       <div class="form-group form-group-sm" id="submit-game">
-              <div class="col-sm-6" >
-                <button  type="button" class="btn btn-primary pull-right" >Send Game</button>
-              </div>
-        </div>
-    </div>
-    
-    
 
-    <script   src="https://code.jquery.com/jquery-3.1.1.js"   integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA="   crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script>
-        var addItem = function(){             
-                let form = $(this).parent()
-                                  .parent()
-                                  .parent();
-                                  
-                let attribute_section = $(this).parent()
-                                               .parent()
-                                               .clone(true);
-                let submitButton = form.find('#submit-game');
-                                    
-                let newButton = submitButton.clone(true);
-                console.log(newButton);
-                // remove button
-                submitButton.remove();
-                attribute_section.find(".game-attr").val("");
-                form.append(attribute_section);
-                form.append(newButton);
-                
-                
-                return attribute_section
-        }
-        let ajaxCB = function(results,error,resolve){
-                        console.log("cb "+results);
-                        console.log('cb '+JSON.stringify(error));
-                       if(error){
-                         return resolve({success:false, error:error});
-                       }
-                       return resolve({success:true, data: results});
-                     }
-        let sendData = function(type,url,data={},cb,resolve){
-          console.log(data);
-          let response = $.ajax({
-                              type: type,
-                              url: url,
-                              data: JSON.stringify(data,null,'\t'),
-                              contentType: 'application/json;charset=UTF-8',
-                              success: function(resultData) { 
-                                 console.log("success "+resultData.result);
-                                  // return cb(resultData, null,resolve);
-                              },
-                              error: function(err){
-                                console.log("success "+resultData.result);
-                                // return cb(null, err,resolve);
-                              }
-                          });
+<div class="container">
+  <h2>Average Per Game: {{game_id}}</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        {%for key in output[0]: %}
+          {% if output[0][key] !=None %}
+            <th>{{key}}</th>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {%for key in output[0]: %}
+          {% if output[0][key] !=None %}
+            <th>{{output[0][key]}}</th>
+          {% endif %}
+        {% endfor %}
+      </tr>
+      
+    </tbody>
+  </table>
 
-        }
-        $( document ).ready(function() {
-            let originalForm;                   
-            $(".add-item").on( "click", function() {
-                addItem.call(this);
-            });
-            $(".remove-item").on( "click", function() {
-                 $(this).parent().parent().remove();
-            });
-            $("#submit-game button").on("click",function(e){
-              e.preventDefault();
-              var gameAttributes = $('.game-attr')
-                                                  .map(function() {
-                                                        return ($(this).val());
-                                                      }).get();;
-              let gameId = gameAttributes.splice(0,1)[0];
-              
-              let specificGameAttributes = {'specificGameAttributes':gameAttributes,"gameId":gameId};
-//               var p = new Promise((resolve, reject) => resolve(5));  
-// p.            then((val) => console.log(val)); // 5 
-              var p = new Promise((resolve, reject)=>{
-                  sendData(
-                            "POST",
-                            "/games",
-                            specificGameAttributes,
-                            ajaxCB,
-                            resolve
-                        )
-              });
-              p.then((response)=>{
-                console.log('after everything '+response);
-                if(response.success){
-                  cloneForm = originalForm//.clone(true);
-                  $('#game-form').remove();
-                  $('h1').remove();
-                  $('body').prepend(cloneForm);
-                  $('body').prepend("<h1>Smarty Game</h1>");
-                  originalForm = cloneForm;
-                }
-              })
-              
-            })
-            originalForm= $("#game-form").clone(true); 
-        });
-    </script>
+<h2>Average Per Game Per Level <h2>
+<table class="table">
+    <thead>
+      <tr>
+        <th>level</th>
+        {%for key in output_per_level[0]: %}
+          {% if output_per_level[0][key] !=None and key != "level" %}
+            <th>{{key}}</th>
+          {% endif %}
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {%for obj in output_per_level: %}
+      <tr>
+        
+          <td>{{obj['level']}}</td>
+          {%for key in obj: %}
+            {% if obj[key] !=None and key != "level" %}
+              <td>{{obj[key]}}</td>
+            {% endif %}
+          {% endfor %}
+        
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
 </body>
+</html>
+
+
+
+
+
+
