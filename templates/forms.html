@@ -22,8 +22,8 @@
     var DropDown = React.createClass({ 
         render(){
             return (
-                <div><a href="#">
-                {this.props.gameId}
+                <div id={this.props.gameId}><a href="#">
+                {this.props.gameId} - {this.props.generalGameAttributes} - {this.props.specificGameAttributes}
                 </a></div>
                 );
         }
@@ -36,7 +36,7 @@
                          <div>
                             return {this.props.games.map((game,i)=>{
                                 console.log(game);
-                                return <DropDown gameId={game.gameId} generalGameAttributes={game.generalGameAttributes} specificeGameAttributes={game.specificeGameAttributes} key={i}/>
+                                return <DropDown gameId={game.gameId} generalGameAttributes={game.generalGameAttributes} specificGameAttributes={game.specificGameAttributes} key={i}/>
                             })}
                           </div>
                       </div>
