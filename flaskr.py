@@ -170,10 +170,13 @@ def statistics_for_one_games(game_id):
 
     output = list(game_instance_stats)
     output_per_level= statistics_for_game_per_level(game_id)
-    # print output_per_level
-    sorted_output_per_level =  sorted(output_per_level[0]["levels"], key=lambda k: k['level']) 
-    # output_per_level["levels"].sort(key=lambda x: x["level"], reverse=False)
-    return render_template('hello.html',output=output,output_per_level=sorted_output_per_level,game_id=game_id)
+    if len(output_per_level) >0:
+        sorted_output_per_level =  sorted(output_per_level[0]["levels"], key=lambda k: k['level'])
+    
+        # output_per_level["levels"].sort(key=lambda x: x["level"], reverse=False)
+        return render_template('hello.html',output=output,output_per_level=sorted_output_per_level,game_id=game_id)
+    else:
+        return render_template('need_more.html')
     # return jsonify({'result' : output})  
     
 @app.route('/games/aggregate/', methods=['GET'])
