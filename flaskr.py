@@ -41,7 +41,7 @@ def get_all_games():
     return jsonify({'result' : output})
 
 @app.route('/games/<gameId>', methods=['GET'])
-def get_one_star(gameId):
+def get_one_game(gameId):
     print 'get it'
     game = db.games
     g = game.find_one({'gameId' : gameId})
@@ -85,7 +85,8 @@ def add_attempt(game_id):
         })
         
         new_game = games.find_one({'gameId': game_id })
-        new_game.pop('_id')
+        if new_game['_id']:
+            new_game.pop('_id')
     else:
         new_game = "you must have params when submitting attempt"
     return jsonify({'result' : new_game})  
